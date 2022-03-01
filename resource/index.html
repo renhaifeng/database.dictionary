@@ -91,12 +91,14 @@
                 <td class="c1">{{ $v.ColumnName }}</td>
                 <td class="c2">{{ $v.ColumnType }}</td>
                 <td class="c3">{{ $v.ColumnDefault }}</td>
-                <td class="c4">{{ $v.IsNullable }}</td>
+                <td class="c4">
+                    {{ if eq $v.IsNullable "YES"}}
+                        Yes
+                    {{ end }}
+                </td>
                 <td class="c5">
                     {{ if eq $v.Extra "auto_increment"}}
-                        是
-                    {{ else }}
-                        否
+                        Yes
                     {{ end }}
                 </td>
                 <td class="c6">{{ $v.ColumnComment }}</td>
