@@ -17,7 +17,7 @@
 └── routes（路由层）
 │   └── route.go
 └── setting（加载配置）
-    └── setting.go
+│   └── setting.go
 ├── go.mod
 ├── go.sum
 ├── main.go
