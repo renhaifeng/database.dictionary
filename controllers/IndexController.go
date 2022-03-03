@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"database.dictionary/models"
+	"database.dictionary/setting"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -13,7 +14,7 @@ type Item struct {
 
 func IndexHandler(c *gin.Context) {
 
-	tableSchema := "tiger"
+	tableSchema := setting.Conf.WatchDb
 
 	tableList, _ := models.GetAllByTableSchema(tableSchema)
 

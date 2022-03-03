@@ -8,8 +8,9 @@ var Conf = new(AppConfig)
 
 // AppConfig App
 type AppConfig struct {
-	Release      bool `ini:"release"`
-	Port         int  `ini:"port"`
+	Release      bool   `ini:"release"`
+	Port         int    `ini:"port"`
+	WatchDb      string `ini:"watch_db"`
 	*MySQLConfig `ini:"mysql"`
 }
 
